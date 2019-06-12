@@ -2,8 +2,6 @@
 
 ![Cute Dino](dino-128.png)
 
-[![Build Status](https://travis-ci.com/jlpteaching/dinocpu.svg?branch=master)](https://travis-ci.com/jlpteaching/dinocpu)
-
 This repository contains chisel implementations of the CPU models from Patterson and Hennessy's Computer Organization and Design primarily for use in UC Davis's Computer Architecture course (ECS 154B).
 
 The repository was originally cloned from https://github.com/ucb-bar/chisel-template.git.
@@ -101,7 +99,7 @@ To run tests in a specific environment prepend the environment name and `/` befo
 As an example, to run the Lab 1 tests:
 
 ```
-dinocpu:sbt> Lab1 / test
+dinocpu:sbt> Lab1 / Test
 ```
 
 ### Running a single test
@@ -195,9 +193,6 @@ _start:
   .data
 .byte 0xFF,0xFF,0xFF,0xFF
 ```
-
-### STEP 0: Install Toolchain
-Visit https://riscv.org/software-tools/risc-v-gnu-compiler-toolchain/ to install the cross-compiler toolchain. Make sure to install the 32-bit version.
 
 ### STEP 1: Assemble
 

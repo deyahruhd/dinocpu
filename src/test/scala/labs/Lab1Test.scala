@@ -68,7 +68,11 @@ class ALUControlTesterLab1 extends ChiselFlatSpec {
   * }}}
   */
 class SingleCycleAddTesterLab1 extends CPUFlatSpec {
-  val test = InstTests.nameMap("add1")
+  val test = CPUTestCase("add1",
+                Map("single-cycle" -> 1),
+                Map(5 -> 1234),
+								Map(0 -> 0, 5 -> 1234, 6 -> 1234),
+								Map(), Map())
   "Single Cycle CPU" should s"run add test ${test.binary}${test.extraName}" in {
     CPUTesterDriver(test, "single-cycle") should be(true)
   }
